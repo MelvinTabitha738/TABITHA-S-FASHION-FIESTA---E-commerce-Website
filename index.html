@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABITHA'S FASHION FIESTA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="announcement-bar">
+            <p>FREE SHIPPING ON ORDERS OVER $75 | USE CODE: TABITHA25 FOR 25% OFF!</p>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="#"><span>TABITHA'S</span> FASHION FIESTA</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#new-arrivals">New Arrivals</a></li>
+                    <li><a href="#collection">Collections</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#sale">Sale</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" class="icon"><i class="fas fa-search" id="search-icon"></i></a>
+                    <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="icon"><i class="fas fa-heart"></i><span class="badge">0</span></a>
+                    <a href="#" class="icon"><i class="fas fa-shopping-bag" id="cart-icon"></i><span class="badge">0</span></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+            <i class="fas fa-times" id="close-search"></i>
+        </div>
+
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Shopping Bag</h3>
+                <i class="fas fa-times" id="close-cart"></i>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your bag is empty</p>
+                    <button class="btn primary-btn">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+                <button class="btn checkout-btn">CHECKOUT</button>
+                <button class="btn view-cart-btn">VIEW CART</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Style</h1>
+            <p>Discover the latest fashion trends and express your unique style</p>
+            <div class="hero-buttons">
+                <a href="#new-arrivals" class="btn primary-btn">SHOP NOW</a>
+                <a href="#collection" class="btn secondary-btn">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>Free Shipping</h3>
+                <p>On orders over $75</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payment</h3>
+                <p>100% secure checkout</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Customer care available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shop By Category</h2>
+                <p>Find your perfect style</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="/api/placeholder/400/500" alt="Dresses">
+                    <div class="category-content">
+                        <h3>Dresses</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="/api/placeholder/400/500" alt="Tops">
+                    <div class="category-content">
+                        <h3>Tops</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="/api/placeholder/400/500" alt="Bottoms">
+                    <div class="category-content">
+                        <h3>Bottoms</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="/api/placeholder/400/500" alt="Accessories">
+                    <div class="category-content">
+                        <h3>Accessories</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="products" id="new-arrivals">
+        <div class="container">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+                <p>Be the first to shop our latest styles</p>
+            </div>
+            <div class="product-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            <div class="section-footer">
+                <a href="#" class="btn secondary-btn">VIEW ALL</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Try-On Banner -->
+    <section class="virtual-tryon">
+        <div class="container">
+            <div class="virtual-tryon-content">
+                <h2>Virtual Try-On Experience</h2>
+                <p>Upload your photo and see how our clothes look on you before purchasing!</p>
+                <button class="btn primary-btn" id="try-on-btn">TRY NOW</button>
+            </div>
+            <div class="virtual-tryon-image">
+                <img src="/api/placeholder/500/300" alt="Virtual Try-On">
+            </div>
+        </div>
+    </section>
+
+    <!-- Try-On Modal -->
+    <div class="try-on-modal">
+        <div class="try-on-content">
+            <span class="close-modal">&times;</span>
+            <h2>Virtual Try-On</h2>
+            <div class="try-on-container">
+                <div class="upload-section">
+                    <label for="photo-upload" class="upload-label">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload Your Photo</span>
+                    </label>
+                    <input type="file" id="photo-upload" accept="image/*" hidden>
+                    <p class="tip">For best results, use a front-facing photo with a neutral background</p>
+                </div>
+                <div class="preview-section">
+                    <div class="user-photo">
+                        <img id="user-image" src="/api/placeholder/300/400" alt="Your Photo">
+                    </div>
+                    <div class="outfit-options">
+                        <h3>Select an Outfit:</h3>
+                        <div class="outfit-grid">
+                            <div class="outfit-item" data-outfit="outfit1">
+                                <img src="/api/placeholder/100/150" alt="Outfit 1">
+                            </div>
+                            <div class="outfit-item" data-outfit="outfit2">
+                                <img src="/api/placeholder/100/150" alt="Outfit 2">
+                            </div>
+                            <div class="outfit-item" data-outfit="outfit3">
+                                <img src="/api/placeholder/100/150" alt="Outfit 3">
+                            </div>
+                            <div class="outfit-item" data-outfit="outfit4">
+                                <img src="/api/placeholder/100/150" alt="Outfit 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-section">
+                    <h3>Your Virtual Look</h3>
+                    <div class="result-image">
+                        <img id="result-image" src="/api/placeholder/300/400" alt="Result">
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn secondary-btn" id="save-look">SAVE LOOK</button>
+                        <button class="btn primary-btn" id="add-to-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Collection -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <div class="section-title">
+                <h2>Summer Collection 2025</h2>
+                <p>Bright colors and vibrant patterns for the sunny season</p>
+            </div>
+            <div class="collection-grid">
+                <div class="collection-item large">
+                    <img src="/api/placeholder/600/800" alt="Summer Collection">
+                    <div class="collection-content">
+                        <h3>Summer Essentials</h3>
+                        <p>Perfect pieces for your vacation wardrobe</p>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="/api/placeholder/400/500" alt="Beach Wear">
+                    <div class="collection-content">
+                        <h3>Beach Wear</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="/api/placeholder/400/500" alt="Evening Looks">
+                    <div class="collection-content">
+                        <h3>Evening Looks</h3>
+                        <a href="#" class="btn outline-btn">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="products" id="trending">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trending Now</h2>
+                <p>Our most popular styles this season</p>
+            </div>
+            <div class="product-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="dresses">Dresses</button>
+                <button class="filter-btn" data-filter="tops">Tops</button>
+                <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+            <div class="product-grid trending-products">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Read reviews from our happy customers</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The quality of Tabitha's clothes is exceptional! I've received so many compliments on my new dress. Will definitely be shopping here again!"</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/50/50" alt="Sarah J.">
+                            <div>
+                                <h4>Sarah J.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The virtual try-on feature is a game changer! I was hesitant to buy online before, but now I can see exactly how things will look. Love it!"</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/50/50" alt="Jessica T.">
+                            <div>
+                                <h4>Jessica T.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Fast shipping and the clothes fit perfectly! The size guide was extremely helpful. Can't wait to order more from the summer collection."</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/50/50" alt="Michelle K.">
+                            <div>
+                                <h4>Michelle K.</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-feed">
+        <div class="container">
+            <div class="section-title">
+                <h2>@TabithasFashion</h2>
+                <p>Follow us on Instagram for style inspiration</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+                <div class="instagram-item">
+                    <img src="/api/placeholder/200/200" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                        <span>View Post</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our VIP List</h2>
+                <p>Subscribe to get exclusive offers, early access to new arrivals, and fashion tips!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary-btn">SUBSCRIBE</button>
+                </form>
+                <div class="newsletter-success">Thank you for subscribing!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section class="sale" id="sale">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flash Sale</h2>
+                <p>Limited time offers on selected items</p>
+            </div>
+            <div class="sale-timer">
+                <div class="countdown">
+                    <div class="time-box">
+                        <span class="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-grid sale-products">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            <div class="section-footer">
+                <a href="#" class="btn secondary-btn">VIEW ALL SALE ITEMS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h3>TABITHA'S FASHION FIESTA</h3>
+                    <p>Your destination for trendy and modern classy outfits that help you express your unique style.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shopping</h3>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Look Book</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Style City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@tabithasfashion.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <span>Payment Methods:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 TABITHA'S FASHION FIESTA. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
